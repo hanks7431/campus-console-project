@@ -5,7 +5,6 @@ PyramidModel, PyramidView, PyramidController를 생성하고,
  */
 
 package Pyramid;
-
 public class PyramidMain {
     public static void main(String[] args) {
         PyramidModel model = new PyramidModel();
