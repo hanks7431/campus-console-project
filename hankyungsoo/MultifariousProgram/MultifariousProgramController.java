@@ -1,4 +1,4 @@
-package campus_console_project_leader_side2.MultifariousProgram;
+package campus_console_project_leader_side.hankyungsoo.MultifariousProgram;
 
 
 import java.util.InputMismatchException;
@@ -16,13 +16,13 @@ public class MultifariousProgramController {
 
     // 구구단 입력 및 예외처리
     public void gugudan() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         boolean isValidInput = false;
 
         while (!isValidInput) {
             try {
                 System.out.print("구구단을 출력할 숫자를 입력하세요 (1~999): ");
-                int number = scanner.nextInt();
+                int number = sc.nextInt();
 
                 if (number >= 1 && number <= 999) {
                     int[] result = model.run(number);
@@ -33,12 +33,11 @@ public class MultifariousProgramController {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("숫자를 입력해주세요");
-                scanner.nextLine();
+                sc.nextLine();
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
-        scanner.close();
     }
 
     // 계산기 출력
@@ -72,31 +71,29 @@ public class MultifariousProgramController {
 
         view.displayMessage("원하는 피라미드 층수를 입력해주세요 (2~10층) : ");
 
-        try {
-            while (true) {
-                String input = sc.nextLine();
 
-                if (input.isEmpty()) {
-                    throw new IllegalArgumentException("값을 입력해야 합니다.");
-                }
+        while (true) {
+            String input = sc.nextLine();
 
+            if (input.isEmpty()) {
+                view.displayMessage("값을 입력해야 합니다.");
+                continue;
+            }
+            try {
                 int floor = Integer.parseInt(input);
 
                 if (floor < 2 || floor > 10) {
                     view.displayMessage("입력 범위를 초과하였습니다. 다시 입력해주세요 : ");
                 } else {
                     model.setFloor(floor);
+                    view.displayPyramid(model.getFloor());
                     break;
                 }
+            } catch (InputMismatchException e) {
+                view.displayMessage("숫자를 입력해야 합니다.");
+            } catch (IllegalArgumentException e) {
+                view.displayMessage("올바른 값이 아닙니다. 다시 입력해주세요 : ");
             }
-
-            view.displayPyramid(model.getFloor());
-
-        } catch (InputMismatchException e) {
-            view.displayMessage("숫자를 입력해야 합니다.");
-        } catch (IllegalArgumentException e) {
-            view.displayMessage("값을 입력해야 합니다.");
         }
     }
-
 }
