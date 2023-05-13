@@ -1,3 +1,5 @@
+package campus_console_project_leader_side2.Jeonheewon;
+
 public class GugudanView {
    
     public void showResult(int[] result) {

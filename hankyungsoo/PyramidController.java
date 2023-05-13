@@ -8,7 +8,7 @@ run 메서드는 사용자 입력을 받고 처리하는 역할을 합니다.
 
  */
 
-package campus_console_project_leader_side.한경수;
+package campus_console_project_leader_side2.hankyungsoo;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

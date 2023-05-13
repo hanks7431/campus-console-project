@@ -4,7 +4,7 @@ displayMessage 메서드는 메시지를 출력합니다.
 displayPyramid 메서드는 주어진 층수에 맞게 피라미드를 출력합니다.
  */
 
-package campus_console_project_leader_side.한경수;
+package campus_console_project_leader_side2.hankyungsoo;
 
 public class PyramidView {
     public void displayMessage(String message) {

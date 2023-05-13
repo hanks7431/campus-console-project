@@ -1,4 +1,4 @@
-package Cal;
+package campus_console_project_leader_side2.Cha;
 
 public class CalculatorController {
 	private CalculatorModel model;

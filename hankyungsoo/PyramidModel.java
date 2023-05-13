@@ -6,7 +6,7 @@ getFloor 메서드는 현재 층수를 반환합니다.
 
  */
 
-package campus_console_project_leader_side.한경수;
+package campus_console_project_leader_side2.hankyungsoo;
 
 public class PyramidModel {
     private int floor;

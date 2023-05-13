@@ -1,3 +1,5 @@
+package campus_console_project_leader_side2.Jeonheewon;
+
 public class GugudanModel {
 	public int[] run(int number) {
         int[] result = new int[9];

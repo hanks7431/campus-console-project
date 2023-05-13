@@ -1,4 +1,4 @@
-package Cal;
+package campus_console_project_leader_side2.Cha;
 
 import java.util.Scanner;
 

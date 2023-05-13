@@ -1,21 +1,23 @@
+package campus_console_project_leader_side2.Jeonheewon;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class GugudanController {
     private GugudanModel model;
     private GugudanView view;
-    
+
 
     public GugudanController(GugudanModel model, GugudanView view) {
         this.model = model;
         this.view = view;
-        
+
     }
 
     public void gugudan() {
-    	Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         boolean isValidInput = false;
-         
+
         while (!isValidInput) {
             try {
                 System.out.print("구구단을 출력할 숫자를 입력하세요 (1~999): ");
@@ -30,10 +32,11 @@ public class GugudanController {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("숫자를 입력해주세요");
-                scanner.nextLine(); 
+                scanner.nextLine();
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
-        }scanner.close();
+        }
+        scanner.close();
     }
 }
