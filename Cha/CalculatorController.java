@@ -1,4 +1,4 @@
-package Cal;
+package campus_console_project_leader_side2.Cha;
 
 public class CalculatorController {
 	private CalculatorModel model;
@@ -10,7 +10,6 @@ public class CalculatorController {
 	}
 
 	public void calculate() {
-
 		double num1 = view.getNumber();
 		double num2 = view.getNumber();
 		char operator = view.getOperator();
@@ -27,8 +26,10 @@ public class CalculatorController {
 		case '/':
 			model.divide(num1, num2);
 			break;
+		default:
+			System.out.println("계산방식선택");
+			return;
 		}
 		view.showResult(model.getResult());
-		model.setResult();
 	}
 }
