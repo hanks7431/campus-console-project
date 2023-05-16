@@ -6,13 +6,14 @@ public class MultifariousProgramModel {
 	private int floor;
 
 	// 구구단 연산 메소드
-	public int[] run(int number) {
+	public int[] run(int number) { // 구구단을 연산하여 배열에 담음
 		int[] result = new int[9];
 		for (int i = 0; i < 9; i++) {
 			result[i] = number * (i + 1);
 		}
 		return result;
 	}
+
 
 	// 계산기 연산 메소드
 	public void add(double num1, double num2) {
@@ -42,6 +43,7 @@ public class MultifariousProgramModel {
 	public void setResult() {
 		result = 0;
 	}
+
 
 	// 피라미드 층수 리턴
 	public void setFloor(int floor) {
